@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,500&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.main-content {
+    padding: 30px 15px;
+}
+.content {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+}
+
+#content-1 {
+    background-color: hsl(263, 55%, 52%);
+    position: relative;
+    z-index: 0;
+}
+
+#content-2 {
+    background-color: hsl(217, 19%, 35%);
+}
+
+#content-3, #content-5 {
+    background-color:hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+#content-4{
+    background-color: hsl(219, 29%, 14%);
+}
+
+
+#content-1, #content-2, #content-4 {
+    color: hsl(0, 0%, 81%);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+}
+.profile img {
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid darkgrey;
+}
+.content h4 {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.content p {
+    opacity: 70%;
+}
+
+.profile-info .name {
+    opacity: 100%;
+    font-size: 1rem;
+}
+
+#quote-img {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    z-index: 1;
+
+}
+
+
+
+@media (min-width: 576px) {
+    .main-content ,#left-content , #top-left-content, #bottom-left-content {
+        display: flex;
+    }
+    #top-left-content, #bottom-left-content {
+        flex-basis: 50%;
+    }
+    .main-content {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    #content-2, #content-3 {
+        flex-basis: 35%;
+    }
+
+    #content-5 {
+        flex-basis: 20%;
+    }
+    #left-content {
+        flex-direction: column;
+        flex-basis: 80%;
+    }
+
+    #content-1, #content-4 {
+        flex-basis: 65%;
+    }
+
+    #left-content .content {
+        margin-right: 15px;
+    }
+}
